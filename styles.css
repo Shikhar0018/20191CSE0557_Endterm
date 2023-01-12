@@ -1,0 +1,41 @@
+/* Set the background color for the top, main, and bottom frames */
+#top-frame {
+    background-color: #e5e5e5;
+    margin-bottom: 800px; /* Add 10px of margin */
+  }
+  #main-frame {
+    background-color: #f2f2f2; /* or use background-image */
+    height: calc(100vh - 100px); /* 100px = height of top-frame + bottom-frame */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  #bottom-frame {
+    background-color: #e5e5e5;
+  }
+  #navbar {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    overflow: hidden; /* Hide overflow */
+    background-color: #3d3d3d; /* Add a background color */
+    display: flex; /* Display the menu items in a row */
+    justify-content: space-between; /* Space the menu items out evenly */
+  }
+  /* Style the navigation links */
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em 1em;
+    display: inline-block;
+  }
+  nav a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+/* Grid layout for product elements */
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        20191CSE0557_Purchase_form
+
+    </head>
+   <body>
+    <style>
+        #purchase-form {
+    width: 500px; /* Set the width of the form */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 20px; /* Add some padding to the form */
+    background-color: #f2f2f2; /* Set a light gray background color */
+    border-radius: 10px; /* Add rounded corners */
+    }
+    
+    /* Form input elements */
+    #purchase-form input[type="text"],
+    #purchase-form input[type="email"],
+    #purchase-form input[type="tel"],
+    #purchase-form textarea {
+    width: 100%; /* Make the inputs full width */
+    padding: 12px 20px; /* Add some padding to the inputs */
+    margin: 8px 0; /* Add some margin to the inputs */
+    box-sizing: border-box; /* Include the padding and border in the total width and height */
+    border: 1px solid #ccc; /* Add a light gray border */
+    border-radius: 4px; /* Add rounded corners */
+    }
+    
+    #purchase-form label {
+    font-size: 1rem; /* Set the font size */
+    margin-bottom: 10px; /* Add some margin to the labels */
+    }
+    #purchase-form input[type="submit"] {
+    width: 100%; /* Make the submit button full width */
+    background-color: #4CAF50; /* Add a green background color */
+    color: white; /* Make the text color white */
+    padding: 14px 20px; /* Add some padding to the button */
+    margin: 8px 0; /* Add some margin to the button */
+    border: none; /* Remove the border */
+    border-radius: 4px; /* Add rounded corners */}
+    
+      </style>
+    <script src="app.js"> </script>
+      <form id="purchase-form" action="submit.php" method="post" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="mobile-number">Mobile Number:</label>
+        <input type="text" id="mobile-number" name="mobile_number">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea>
+        
+        <label for="payment">Payment Mode:</label>
+        <select id="payment" name="payment">
+          <option value="cash">Cash</option>
+          <option value="card">Card</option>
+          <option value="upi">UPI</option>
+        </select>
+        
+        <input type="submit" value="Submit">
+      </form>
+      <script>
+        function validateForm() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var address = document.getElementById("address").value;
+
+  if (name == "" || phone == "" || email == "" || address == "") {
+    alert("All fields must be filled out");
+    return false;
+  }
+
+  if (isNaN(phone) || phone.length != 10) {
+    alert("Invalid phone number");
+    return false;
+  }
+
+  return true;
+}
+
+
+      </script>
+   
+   </body>
+    
+      
+</html>
